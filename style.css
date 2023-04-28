@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgba(255, 255, 0, 0.645);
+}
+
+/* -------------------------heading------------------------ */
+.heading {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+/* ---------------------------container------------------- */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+/* ----------------------row1-------------------------- */
+.row1 {
+  height: 100px;
+  width: 100px;
+  background-color: #0684ebe6;
+  margin-bottom: 80px;
+  animation: sumit 2s ease infinite alternate;
+}
+@keyframes sumit {
+  0% {
+    transform: skew(30deg);
+  }
+  100% {
+    transform: skew(-30deg);
+  }
+}
+/* -------------------------------row2-------------------------------- */
+.row2 {
+  height: 100px;
+  width: 100px;
+  background-color: rgba(5, 164, 164, 0.788);
+  animation: sumit2 2s ease infinite alternate;
+  margin-bottom: 80px;
+}
+@keyframes sumit2 {
+  0% {
+    transform: skewY(30deg);
+  }
+  100% {
+    transform: skewY(-30deg);
+  }
+}
+/* ----------------------------------------row3----------------------------- */
+.row3 {
+  height: 100px;
+  width: 100px;
+  background-color: rgba(5, 74, 171, 0.788);
+  animation: sumit3 2s ease-in infinite;
+  margin-bottom: 80px;
+}
+@keyframes sumit3 {
+  0% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* ----------------------------------------row4----------------------------- */
+
+.row4 {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 30px;
+}
+.box1 {
+  animation: sumit5 2s ease-in infinite alternate-reverse;
+  background-color: #0684ebe6;
+}
+@keyframes sumit5 {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1.5);
+  }
+}
+.box2 {
+  animation: sumit6 2s ease-in infinite alternate-reverse;
+  background-color: rgba(255, 0, 0, 0.729);
+}
+@keyframes sumit6 {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1.5, 1);
+  }
+}
+.box3 {
+  animation: sumit7 2s ease-in infinite alternate-reverse;
+  background-color: green;
+}
+@keyframes sumit7 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+/* ----------------------------------bottom------------------------------- */
+.bottom {
+  color: black;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+}
+
+/* ------------------------------------------------------nextslide-------------------------------------- */
+
+/* ----------------container-1---------------------- */
+
+.container-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.list {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  transition: width 5s;
+  margin: 20px;
+}
+li::marker {
+  padding-top: 10px;
+}
+.list:hover {
+  width: 300px;
+}
+
+.list2 {
+  transition: all 5s;
+}
+.list2:hover {
+  width: 300px;
+  height: 300px;
+}
+.back {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+}
+.next {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------------------------------third slide--------------------------------- */
+
+.background {
+  border: 10px solid;
+  border-color: white green white orange;
+  height: 100vh;
+  background-image: url("./image/sky.jpg");
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.ha {
+  display: inline-block;
+  height: 50px;
+  border: 2px solid- red;
+  font-weight: 900;
+  font-size: 40px;
+}
+.happy {
+  background-color: orange;
+}
+.indepe {
+  background-color: white;
+}
+.day {
+  background-color: green;
+}
+.sky {
+}
+
+.road {
+  background-image: url("./image/road.jpg");
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+  height: 180px;
+  width: 500%;
+  display: inline-block;
+  bottom: 0;
+  animation: road 3s infinite linear;
+}
+@keyframes road {
+  100% {
+    transform: translateX(-1000px);
+  }
+}
+.city {
+  background-image: url("./image/city.png");
+  /* background-size: cover; */
+  position: absolute;
+  z-index: 3;
+ 
+  height: 219px;
+  width: 500%;
+  display: inline-block;
+  top: 294px;
+  animation: city 5s infinite linear;
+
+  
+}
+@keyframes city {
+  100% {
+    transform: translateX(-600px);
+  }
+}
+.car {
+  background-image: url("./image/car.png");
+  background-size: cover;
+  position: absolute;
+  z-index: 4;
+  height: 117px;
+  width: 341px;
+  display: inline-block;
+  top: 406px;
+  left: 550px;
+  size: 100px; 
+  animation: car 2s infinite linear;
+}
+@keyframes car {
+  100%{
+    transform: translateY(-4px);
+  }
+  
+}
+.sun {
+  background-image: url("./image/sunc.png");
+  background-size: cover;
+  background-size: contain;
+  position: absolute;
+  z-index: 4;
+  height: 119px;
+  width: 151px;
+  right: 42px;
+  display: block;
+  right: 165px;
+  top: 30px;
+  animation: sun 4s infinite linear;
+  
+}
+@keyframes sun {
+  0%{
+    transform: translateX(0px);
+
+  }
+100%{
+  transform: translateX(-100px);
+}
+ 
+ 
+  
+}
+
+
+.left-wheel{
+  background-image: url("./image/wheel.png");
+  background-size: cover;
+  
+  position: absolute;
+  height: 72px;
+  width: 72px;
+  z-index: 4;
+  bottom: 142px;
+  left: 574px;
+  animation: wheel 0.2s infinite linear ;
+}
+.right-wheel{
+  background-image: url("./image/wheel.png");
+  background-size: cover;
+  position: absolute;
+  height: 72px;
+  width: 72px;
+  z-index: 4;
+  bottom: 142px;
+  right: 660px;
+animation: wheel 0.2s infinite linear;
+
+}
+@keyframes wheel {
+  100%{
+    transform: rotate(360deg);
+  }
+  
+}
+.flag{
+  background-image: url("./image/Tiranga1.svg");
+  background-size: cover;
+  position: absolute;
+  height: 72px;
+  width: 72px;
+  z-index: 4;
+  bottom: 245px;
+  right: 655px;
+
+
+}
